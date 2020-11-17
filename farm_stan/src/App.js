@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Footer from './components/Footer'
 
 export default class App extends Component {
   render() {
@@ -6,6 +7,7 @@ export default class App extends Component {
       <div>
         <h1>FARM STAN</h1>
         <p>axios is added</p>
+        <Footer />
       </div>
     )
   }

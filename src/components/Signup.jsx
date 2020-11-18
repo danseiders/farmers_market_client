@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Login extends Component {
+export default class Signup extends Component {
     render() {
         return (
-            <div className="Login">
-                <h4>Log in</h4>
+            <div className='Signup'>
+                <h4>Create an account</h4>
                 <label htmlFor='name'>Username: </label>
                     <input type="text" name='name'/><br />
                 <label htmlFor="password">Password: </label>

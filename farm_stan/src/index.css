@@ -10,3 +10,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.about {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b9/Farmers_Market_Hertford.jpg');
+  /* clip-path: inset(55% 0 25% 0); */
+  height: 700px;
+}
+.infoDump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(188,188,188,0.75);
+  text-align: center;
+}

@@ -9,8 +9,8 @@ export default class Header extends Component {
             <div className='Header'>
                 <Title />
                 <div className='User-box'>
-                    <Signup />
                     <Login />
+                    <p>New? Create An Account [link to Signup]</p>
                 </div>
             </div>
         )

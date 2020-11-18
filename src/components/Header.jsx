@@ -8,7 +8,6 @@ export default class Header extends Component {
             <div className='Header'>
                 <Title />
                 <Login />
-                <p>axios is added</p>
             </div>
         )
     }

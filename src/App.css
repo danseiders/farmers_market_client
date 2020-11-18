@@ -1,0 +1,12 @@
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 15%vh;
+}
+.Footer {
+  background-color: darkgrey;
+  padding: 15px;
+}
+

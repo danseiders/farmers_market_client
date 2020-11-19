@@ -4,8 +4,7 @@ export default class Title extends Component {
     render() {
         return (
             <div className='Title'>
-                <h1>FARM STAN</h1>
-                <h2>[Farm Stan Logo Here]</h2>
+                <img src="../images/farm-stan-logo.png" width='500px'/>
             </div>
         )
     }

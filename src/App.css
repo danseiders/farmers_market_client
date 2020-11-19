@@ -3,6 +3,7 @@ body{
   min-height: 100vh;
   flex-direction: column;
 }
+/* HEADER */
 .Header {
   display: flex;
   justify-content: space-between;
@@ -12,10 +13,10 @@ body{
   padding-left: 5%;
   padding-right: 5%;
 }
-.Footer {
-  background-color: darkgrey;
-  padding: 10px;
+.Title img {
+  width: 500px;
 }
+/* LOGIN AREA */
 .Login {
   background-color: darkkhaki;
   text-align: right;
@@ -39,6 +40,43 @@ body{
 .User-box p {
   font-size: .7em;
   padding-bottom: 10px;
+}
+/* MARKET ITEMS */
+.Maret-item {
+  background-color: peru;
+  color: white;
+}
+
+/* FARM ITEMS */
+
+/* FOOTER */
+.Footer {
+  background-color: darkgrey;
+  padding: 10px;
+}
+
+@media (max-width: 840px) {
+  .Title img {
+    width: 350px;
+  }
+}
+@media (max-width: 670px) {
+  .Title img {
+    width: 220px;
+  }
+  .Login {
+    padding: 0px;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .Login input {
+    margin-bottom: 1px;
+    padding: 0px;
+    width: 80px;
+  }
+  .Header {
+    height: 18vh;
+  }
 }
 
 

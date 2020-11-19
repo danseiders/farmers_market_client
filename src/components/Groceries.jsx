@@ -10,7 +10,7 @@ export default class Groceries extends Component {
     }
 
     componentDidMount() {
-        axios.get(`https://farm-stan-api.herokuapp.com/`)
+        axios.get(`https://farm-stan-api.herokuapp.com/farms`)
         .then(res => {
             console.log(res)
             this.setState({ vegetables: res.data })

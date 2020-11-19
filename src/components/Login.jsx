@@ -9,7 +9,7 @@ export default class Login extends Component {
                     <input type="text" name='name'/><br />
                 <label htmlFor="password">Password: </label>
                     <input type='password' name='password'></input><br />
-                <input type="button" value="Submit"/>
+                <button value="Submit">Submit</button>
             </div>
         )
     }

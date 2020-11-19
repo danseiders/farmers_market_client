@@ -1,12 +1,36 @@
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 .Header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 15%vh;
+  height: 20vh;
 }
 .Footer {
   background-color: darkgrey;
-  padding: 15px;
+  padding: 10px;
+}
+.Login {
+  background-color: darkkhaki;
+  text-align: right;
+  border-radius: 10px;
+  padding: 10px;
+}
+.Login input {
+  margin-bottom: 5px;
+}
+.Login h4 {
+  text-align: center;
+  color: white;
+}
+.Login button {
+  border: none;
+  padding: 5px;
+  color: white;
+  background-color: green;
 }
 

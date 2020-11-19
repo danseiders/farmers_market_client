@@ -10,7 +10,7 @@ export default class Groceries extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://jsonplaceholder.typicode.com/users`)
+        axios.get(`http://farm-stan-api.herokuapp.com/`)
         .then(res => {
             console.log(res)
             this.setState({ vegetables: res.data })
@@ -21,11 +21,12 @@ export default class Groceries extends Component {
         return (
             <div>
                 <h1>VEGETABLES:</h1>
-                <ul>
+                {this.state.vegetables}
+                {/* <ul>
                 {this.state.vegetables.map((vegie) => 
                 <li>{vegie.name}</li>
                 )}
-                </ul>
+                </ul> */}
             </div>
         )
     }

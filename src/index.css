@@ -24,4 +24,5 @@ code {
   align-items: center;
   background-color: rgba(188,188,188,0.85);
   text-align: center;
+  padding: 10px;
 }

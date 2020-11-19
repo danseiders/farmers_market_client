@@ -5,10 +5,12 @@ body{
 }
 .Header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   height: 20vh;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .Footer {
   background-color: darkgrey;
@@ -22,6 +24,7 @@ body{
 }
 .Login input {
   margin-bottom: 5px;
+  padding: 2px;
 }
 .Login h4 {
   text-align: center;
@@ -32,5 +35,9 @@ body{
   padding: 5px;
   color: white;
   background-color: green;
+}
+.User-box p {
+  font-size: .7em;
+  padding-bottom: 10px;
 }
 

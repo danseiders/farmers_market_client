@@ -23,7 +23,7 @@ export default class Groceries extends Component {
                 <h1>VEGETABLES:</h1>
                 <ul>
                 {this.state.vegetables.map((vegie) => 
-                <li>{vegie.name}</li>
+                <li key={vegie.id}>{vegie.name} | {vegie.variation}</li>
                 )}
                 </ul>
             </div>

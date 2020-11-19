@@ -4,6 +4,7 @@ export default class Login extends Component {
     render() {
         return (
             <div className="Login">
+                <h4>Log in</h4>
                 <label htmlFor='name'>Username: </label>
                     <input type="text" name='name'/><br />
                 <label htmlFor="password">Password: </label>

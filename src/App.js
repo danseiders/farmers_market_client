@@ -6,27 +6,34 @@ import Groceries from './Pages/Groceries'
 import Header from './components/Header'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Markets from './Pages/Markets'
+import Nav from './components/Nav'
 
 
 export default function App() {
   return (
-    <Router>
+    <div className='App'>
       <Header />
-      <Link to="/">Home</Link><br/>
-      <Link to="/groceries">Vegetables</Link><br/>
-      <Link to="/markets" exact >Our Farmers Markets</Link>
-      <Switch>
-        <Route path="/groceries">
-          <Vegies />
-        </Route>
-        <Route path="/markets" exact>
-          <Stalls />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+      <Nav />
+        <Router>
+        <div className='React-router'>
+          <Link to="/">Home</Link><br/>
+          <Link to="/groceries">Vegetables</Link><br/>
+          <Link to="/markets" exact >Our Farmers Markets</Link>
+          <Switch>
+            <Route path="/groceries" component={Groceries}>
+              <Vegies />
+            </Route>
+            <Route path="/markets" exact component={Markets}>
+              <Stalls />
+            </Route>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+        </Router>
+      <Footer />
+    </div>
   )
 }
 

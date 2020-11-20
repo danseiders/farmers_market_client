@@ -1,4 +1,4 @@
-body{
+.App {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -41,6 +41,17 @@ body{
   font-size: .7em;
   padding-bottom: 10px;
 }
+/* NAV BAR */
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+}
+.Nav ul {
+  list-style: none;
+}
+
 /* MARKET ITEMS */
 .Maret-item {
   background-color: peru;

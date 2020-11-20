@@ -7,6 +7,7 @@ import Header from './components/Header'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Markets from './Pages/Markets'
 import Nav from './components/Nav'
+import Signup from './Pages/Signup'
 
 
 export default function App() {
@@ -25,6 +26,9 @@ export default function App() {
             </Route>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route>
+              <Signup />
             </Route>
           </Switch>
         </div>

@@ -9,7 +9,7 @@ import {BrowserRouter as Router, Switch, Route, Link, withRouter, Redirect} from
 import Markets from './Pages/Markets'
 import Nav from './components/Nav'
 import Signup from './Pages/Signup'
-import Farms from './Pages/Farms'
+import NewFarm from './Pages/NewFarm'
 
 
 export default function App() {
@@ -35,8 +35,8 @@ export default function App() {
             <Route>
               <Signup />
             </Route>
-            <Route path="/farms" exact >
-              <Farm />
+            <Route path='farms' component={NewFarm}>
+              <NewFarmPage />
             </Route>
           </Switch>
         </div>
@@ -60,11 +60,12 @@ function Vegies() {
 function Stalls() {
   return <Markets />
 }
+
 function Farm() {
   return <Farms />
 }
 
-function Farm() {
-  return <Farms />
+function NewFarmPage() {
+  return <NewFarm />
 }
 

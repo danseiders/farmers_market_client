@@ -37,6 +37,7 @@ export default class Farms extends Component {
                     </ul>
                 </div>    
                 )}
+                <a href="../Pages/NewFarm">Add a New Farm</a>
                 <div className='Footer'>
                     <Footer />
                 </div>

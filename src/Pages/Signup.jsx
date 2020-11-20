@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router'
 
 export default class Signup extends Component {
     constructor(props){
@@ -8,7 +9,8 @@ export default class Signup extends Component {
            displayName: '',
            email: '',
            password: '',
-
+           redirect: false
+        //    loggedIn: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -17,21 +19,30 @@ export default class Signup extends Component {
         this.setState({ [event.target.id]: event.target.value })
     }
     handleSubmit(event){
-        console.log(event)
         event.preventDefault()
-        axios.post('http://localhost:3003/users/new', {
+        axios.post('https://farm-stan-api.herokuapp.com/users/new', {
             displayName: this.state.displayName,
             email: this.state.email,
             password: this.state.password
+
         })
         .then(res =>  {
-            console.log(res)
+            console.log(res) 
         })
         .catch(err => {
             console.log(err)
         })
+        .then(() => {
+            this.setState({
+                redirect: true,
+                // loggedIn: true
+            })
+        })
     }
     render() {
+        if (this.state.redirect === true) {
+            return <Redirect to="/" />
+        }
         return (
             <div>
                 <h4>Create an account</h4>
@@ -56,6 +67,7 @@ export default class Signup extends Component {
                     onChange={this.handleChange}/><br />
                 <input type="submit" value="Submit"/>
             </form>
+            
         </div>
         )
     }

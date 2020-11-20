@@ -9,7 +9,6 @@ import {BrowserRouter as Router, Switch, Route, Link, withRouter, Redirect} from
 import Markets from './Pages/Markets'
 import Nav from './components/Nav'
 import Signup from './Pages/Signup'
-import { tsConstructorType } from '@babel/types'
 
 
 export default function App() {
@@ -44,7 +43,6 @@ export default function App() {
 }
 
 function Home() {
-  console.log('hittin home')
   return <About />
 }
 

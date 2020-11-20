@@ -31,11 +31,8 @@ export default function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route>
+            <Route path='/signup' exact component={Signup}>
               <Signup />
-            </Route>
-            <Route path="/farms" exact >
-              <Farm />
             </Route>
           </Switch>
         </div>

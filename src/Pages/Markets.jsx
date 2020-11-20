@@ -14,7 +14,8 @@ export default class Markets extends Component {
         axios.get(`https://farm-stan-api.herokuapp.com/markets`)
         .then(res => {
             console.log(res)
-            this.setState({ markets: res.data })
+            this.setState({ markets: res.data.markets })
+            console.log(this.state.markets)
         })
     }
 
@@ -22,16 +23,11 @@ export default class Markets extends Component {
         return (
             <div>
                 <h1>MARKETS:</h1>
+                <ul>
                 {this.state.markets.map((market) => 
-                <a href='#'>
-                    <div className='Market-item' key={market._id}>
-                        {market.image}
-                        {market.name}
-                        {market.address}
-                    </div>
-                </a>
+                <li key={market.id}>{market.name} | {market.address}</li>
                 )}
-                
+                </ul>
             </div>
         )
     }

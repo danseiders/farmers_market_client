@@ -5,17 +5,22 @@ import Footer from './components/Footer'
 import Groceries from './Pages/Groceries'
 import Header from './components/Header'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import Markets from './Pages/Markets'
 
 
 export default function App() {
   return (
     <Router>
       <Header />
-      <Link to="/">Home</Link>
-      <Link to="/groceries">Vegetables</Link>
+      <Link to="/">Home</Link><br/>
+      <Link to="/groceries">Vegetables</Link><br/>
+      <Link to="/markets" exact >Our Farmers Markets</Link>
       <Switch>
         <Route path="/groceries">
           <Vegies />
+        </Route>
+        <Route path="/markets" exact>
+          <Stalls />
         </Route>
         <Route path="/">
           <Home />
@@ -31,6 +36,10 @@ function Home() {
 
 function Vegies() {
   return <Groceries />
+}
+
+function Stalls() {
+  return <Markets />
 }
 
 // export default class App extends Component {

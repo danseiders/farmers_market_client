@@ -5,9 +5,10 @@ import Footer from './components/Footer'
 import Groceries from './Pages/Groceries'
 import Farms from './Pages/Farms'
 import Header from './components/Header'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link, withRouter, Redirect} from 'react-router-dom';
 import Markets from './Pages/Markets'
 import Nav from './components/Nav'
+import Signup from './Pages/Signup'
 import Farms from './Pages/Farms'
 
 
@@ -30,6 +31,9 @@ export default function App() {
             </Route>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route>
+              <Signup />
             </Route>
             <Route path="/farms" exact >
               <Farm />

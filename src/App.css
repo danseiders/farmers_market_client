@@ -8,8 +8,9 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: 100vh;
   justify-content: space-between;
+  flex: 1;
 }
 ul {
   list-style: none;
@@ -71,6 +72,7 @@ ul {
 .Markets {
   display: flex;
   flex-direction: column;
+  text-align: center;
 } 
 .Markets-item {
   display: flex;
@@ -85,10 +87,16 @@ ul {
   display: flex;
   flex-direction: column;
   padding: 15px;
+  width: 40%;
+  margin: 10px auto;
+  text-align: center;
+  background-color: thistle;
+  border-radius: 20px;
 }
 .Market-item img {
   max-width: 100px;
   max-height: 100px;
+  margin: 0 auto;
 }
 
 /* FARM ITEMS */

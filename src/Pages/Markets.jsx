@@ -25,11 +25,11 @@ export default class Markets extends Component {
                 <h1>MARKETS:</h1>
                 <div className='Markets-Item'>
                 {this.state.markets.map((market) => 
-                <div className='Market-item' key={market._id}>
-                {market.name}
-                <img src={market.image}></img>
-                {market.address}
-            </div>
+                    <div className='Market-item' key={market._id}>
+                    {market.name}
+                    <img src={market.image}></img>
+                    {market.address}
+                    </div>
                 )}
                 </div>
             </div>

@@ -44,9 +44,9 @@ export default class Signup extends Component {
             return <Redirect to="/" />
         }
         return (
-            <div>
-                <h4>Create an account</h4>
-            <form className='Signup' onSubmit={this.handleSubmit}>
+            <div className='Signup'>
+                <h3>Create an account</h3>
+            <form className='Signup-form' onSubmit={this.handleSubmit}>
                 <label htmlFor='displayName'>Username: </label>
                 <input 
                     type='text' 
@@ -65,7 +65,8 @@ export default class Signup extends Component {
                     name='password'
                     id='password' 
                     onChange={this.handleChange}/><br />
-                <input type="submit" value="Submit"/>
+                {/* <input type="submit" value="Submit"/> */}
+                <button id='submit' value='submit'>Submit</button>
             </form>
             
         </div>

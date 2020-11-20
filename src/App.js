@@ -9,7 +9,6 @@ import {BrowserRouter as Router, Switch, Route, Link, withRouter, Redirect} from
 import Markets from './Pages/Markets'
 import Nav from './components/Nav'
 import Signup from './Pages/Signup'
-import Farms from './Pages/Farms'
 
 
 export default function App() {
@@ -60,10 +59,6 @@ function Vegies() {
 function Stalls() {
   return <Markets />
 }
-function Farm() {
-  return <Farms />
-}
-
 function Farm() {
   return <Farms />
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Footer from '../components/Footer'
+
 
 export default class Groceries extends Component {
     constructor(props) {
@@ -26,6 +28,9 @@ export default class Groceries extends Component {
                 <li key={veggie.id}>{veggie.name} | {veggie.variation}</li>
                 )}
                 </ul>
+                <div className='Footer'>
+                    <Footer />
+                </div>
             </div>
         )
     }

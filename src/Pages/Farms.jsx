@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Header from '../components/Header'
 import Groceries from './Groceries'
+import Footer from '../components/Footer'
 
 export default class Farms extends Component {
     constructor(props) {
@@ -34,9 +35,11 @@ export default class Farms extends Component {
                         })
                     }
                     </ul>
-                </div>
-                    
+                </div>    
                 )}
+                <div className='Footer'>
+                    <Footer />
+                </div>
             </div>
         )
     }

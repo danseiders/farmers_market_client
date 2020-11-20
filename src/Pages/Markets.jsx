@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
+
 
 export default class Markets extends Component {
     constructor(props) {
@@ -31,6 +33,9 @@ export default class Markets extends Component {
                     {market.address}
                     </div>
                 )}
+                </div>
+                <div className='Footer'>
+                <Footer />
                 </div>
             </div>
         )

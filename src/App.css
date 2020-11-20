@@ -10,7 +10,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
-  flex: 1;
 }
 ul {
   list-style: none;
@@ -105,6 +104,11 @@ ul {
 .Footer {
   background-color: darkgrey;
   padding: 10px;
+  flex: none;
+}
+/* REACT ROUTER */
+.React-router {
+  flex: 10;
 }
 /* PAGES */
 .About {

@@ -94,6 +94,9 @@ ul {
   align-items: center;
   width: 50%;
 }
+.Nav-links a {
+  text-decoration: none;
+}
 
 /* MARKET PAGE */
 .Markets {

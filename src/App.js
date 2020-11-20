@@ -12,13 +12,10 @@ import Nav from './components/Nav'
 export default function App() {
   return (
     <div className='App'>
-      <Header />
-      <Nav />
         <Router>
         <div className='React-router'>
-          <Link to="/">Home</Link><br/>
-          <Link to="/groceries">Vegetables</Link><br/>
-          <Link to="/markets" exact >Our Farmers Markets</Link>
+          <Header />
+          <Nav />
           <Switch>
             <Route path="/groceries" component={Groceries}>
               <Vegies />

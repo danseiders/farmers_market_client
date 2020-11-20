@@ -19,9 +19,9 @@ export default class Groceries extends Component {
 
     render() {
         return (
-            <div>
+            <div className='Groceries'>
                 <h1>VEGETABLES:</h1>
-                <ul>
+                <ul className='Groceries-item'>
                 {this.state.vegetables.map((veggie) => 
                 <li key={veggie.id}>{veggie.name} | {veggie.variation}</li>
                 )}

@@ -21,9 +21,9 @@ export default class Markets extends Component {
 
     render() {
         return (
-            <div>
+            <div className='Markets'>
                 <h1>MARKETS:</h1>
-                <ul>
+                <ul className='Markets-Item'>
                 {this.state.markets.map((market) => 
                 <li key={market._id}>{market.name} | {market.address}</li>
                 )}

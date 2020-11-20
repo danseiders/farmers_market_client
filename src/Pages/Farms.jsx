@@ -21,10 +21,10 @@ export default class Farms extends Component {
 
     render() {
         return (
-            <div>
+            <div className='Farms'>
                 <h1>FARMS:</h1>
                 {this.state.farms.map((farm) => 
-                <div className='Farm-item'>
+                <div className='Farms-item'>
                     <h3 key={farm._id}>{farm.name}</h3>
                     <p>Markets{farm.market}</p>
                     <h5>Available This Week:</h5>

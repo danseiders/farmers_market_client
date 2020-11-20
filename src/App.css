@@ -1,7 +1,18 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+}
 .App {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  min-height: 80vh;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
 }
 /* HEADER */
 .Header {
@@ -48,8 +59,12 @@
   align-items: center;
   min-height: 10vh;
 }
-.Nav ul {
+.Nav-links {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
 }
 
 /* MARKET ITEMS */
@@ -65,7 +80,39 @@
   background-color: darkgrey;
   padding: 10px;
 }
+/* PAGES */
+.About {
+  background-image: url('https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  /* clip-path: inset(55% 0 25% 0); */
+  height: 60vh;
+  background-size: cover;
+}
+.Farms {
+  height: 60vh;
+}
+.Groceries {
+  height: 60vh;
+}
+.Markets {
+  height: 60vh;
+}
+/* Index.css page items merged into App.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.infoDump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(188,188,188,0.85);
+  text-align: center;
+  padding: 20px;
+}
+/* Responsive Media Queries */
 @media (max-width: 840px) {
   .Title img {
     width: 350px;

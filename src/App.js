@@ -25,7 +25,7 @@ export default function App() {
               <Stalls />
             </Route>
             <Route path="/farms" exact component={Farms}>
-              <OurFarms />
+              <Farm />
             </Route>
             <Route path="/" exact>
               <Home />
@@ -52,7 +52,7 @@ function Vegies() {
 function Stalls() {
   return <Markets />
 }
-function OurFarms() {
+function Farm() {
   return <Farms />
 }
 

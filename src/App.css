@@ -67,10 +67,28 @@ ul {
   width: 50%;
 }
 
-/* MARKET ITEMS */
-.Maret-item {
+/* MARKET PAGE */
+.Markets {
+  display: flex;
+  flex-direction: column;
+} 
+.Markets-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 150px;
   background-color: peru;
   color: white;
+}
+.Market-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.Market-item img {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 /* FARM ITEMS */

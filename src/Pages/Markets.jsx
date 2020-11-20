@@ -23,11 +23,15 @@ export default class Markets extends Component {
         return (
             <div className='Markets'>
                 <h1>MARKETS:</h1>
-                <ul className='Markets-Item'>
+                <div className='Markets-Item'>
                 {this.state.markets.map((market) => 
-                <li key={market._id}>{market.name} | {market.address}</li>
+                <div className='Market-item' key={market._id}>
+                {market.name}
+                <img src={market.image}></img>
+                {market.address}
+            </div>
                 )}
-                </ul>
+                </div>
             </div>
         )
     }

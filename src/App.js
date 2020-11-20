@@ -3,6 +3,7 @@ import './App.css'
 import About from './components/About'
 import Footer from './components/Footer'
 import Groceries from './Pages/Groceries'
+import Farms from './Pages/Farms'
 import Header from './components/Header'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Markets from './Pages/Markets'
@@ -26,6 +27,9 @@ export default function App() {
             <Route path="/" exact>
               <Home />
             </Route>
+            <Route path="/farms" exact >
+              <Farm />
+            </Route>
           </Switch>
         </div>
         </Router>
@@ -46,19 +50,7 @@ function Stalls() {
   return <Markets />
 }
 
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <div className="site-body">
-//           <Header />
-//           <About />
-//           <p>index of farms here</p>
-//           <Route path='/groceries' component={Groceries} />
-//           <Footer />
-//         </div>
-//       </Router>
-//     )
-//   }
-// }
+function Farm() {
+  return <Farms />
+}
 

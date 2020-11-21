@@ -3,6 +3,7 @@ import axios from 'axios'
 import Header from '../components/Header'
 import Groceries from './Groceries'
 import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 
 export default class Farms extends Component {
@@ -38,7 +39,7 @@ export default class Farms extends Component {
                     </ul>
                 </div>    
                 )}
-                <a href="/farms/new">Add a New Farm</a>
+                <Link to="/newfarm">Add a New Farm</Link>
                 <div className='Footer'>
                     <Footer />
                 </div>

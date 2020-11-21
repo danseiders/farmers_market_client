@@ -1,7 +1,48 @@
+import axios from 'axios'
 import React, { Component } from 'react'
+import { Redirect } from 'react-router'
 
 export default class NewFarm extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            name: '',
+            address: '',
+            phoneNumber: '',
+            email: '',
+            market: '',
+            redirect: null
+        }
+    }
+    handleChange = (event) => {
+        this.setState({[event.target.id]: event.target.value })
+    }
+    handleSubmit = (event) => {
+        console.log(event.target)
+        event.preventDefault()
+        axios.post('https://farm-stan-api.herokuapp.com/farms', {
+            name: this.state.name,
+            address: this.state.address,
+            phoneNumber: this.state.phoneNumber,
+            email: this.state.email,
+            market: this.state.market
+        })
+        .then(res =>  {
+            console.log(res) 
+        })
+        .catch(err => {
+            console.log(err)
+        })
+        .then(() => {
+            this.setState({
+                redirect: true,
+            })
+        })
+    }
     render() {
+        if (this.state.redirect === true) {
+            return <Redirect to="/farms" />
+        }
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

@@ -24,7 +24,7 @@ export default function App() {
             <Route path="/groceries" component={Groceries}></Route>
             <Route path="/markets" component={Markets}></Route>
             <Route path="/farms" component={Farms}></Route>
-            <Route path='farms/new' component={NewFarm}></Route>
+            <Route path="/newfarm" component={NewFarm}></Route>
             <Route path="/signup" component={Signup}></Route>
           </Switch>
         </div>
@@ -36,6 +36,3 @@ export default function App() {
     </div>
   )
 }
-
-
-

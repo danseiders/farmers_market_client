@@ -44,13 +44,37 @@ ul {
 }
 .Login button {
   border: none;
-  padding: 5px;
+  padding: 10px;
   color: white;
   background-color: green;
 }
 .User-box p {
   font-size: .7em;
   padding-bottom: 10px;
+}
+.logoutBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: red;
+  width: 100px;
+  cursor: pointer;
+}
+.newFarmBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: green;
+  width: 100px;
+  cursor: pointer;
+}
+.editFarmBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: goldenrod;
+  width: 100px;
+  cursor: pointer;
 }
 /* SIGNUP AREA */
 .Signup {
@@ -79,6 +103,7 @@ ul {
   color: white;
   margin-top: 5px;
   border: none;
+  cursor: pointer;
 }
 /* NAV BAR */
 .Nav {
@@ -96,6 +121,7 @@ ul {
 }
 .Nav-links a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* MARKET PAGE */

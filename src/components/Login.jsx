@@ -67,7 +67,9 @@ export default class Login extends Component {
                 { this.state.loggedIn ? 
                 <div>
                     <h2>Welcome, {sessionStorage.displayName}</h2>
-                    <button onClick={this.logout}>Logout</button> 
+                    <button className='newFarmBtn'>New Farm</button>
+                    <button className='editFarmBtn'>Edit Farm</button>
+                    <button className='logoutBtn' onClick={this.logout}>Logout</button> 
                 </div>
                 :
                 <form className="Login" onSubmit={this.handleSubmit}>
@@ -86,7 +88,7 @@ export default class Login extends Component {
                             id='password'
                             onChange={this.handleChange}/>
                             <br/>
-                    <input type="submit" value="Log In"/>
+                    <button className='loginBtn' id='submit' value='submit'>Submit</button>
                 </form> 
                 }
             </div>

@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Groceries from './Groceries'
 import Footer from '../components/Footer'
 
+
 export default class Farms extends Component {
     constructor(props) {
         super(props)
@@ -37,7 +38,7 @@ export default class Farms extends Component {
                     </ul>
                 </div>    
                 )}
-                <a href="../Pages/NewFarm">Add a New Farm</a>
+                <a href="/farms/new">Add a New Farm</a>
                 <div className='Footer'>
                     <Footer />
                 </div>

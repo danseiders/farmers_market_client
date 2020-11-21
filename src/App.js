@@ -20,24 +20,12 @@ export default function App() {
           <Header />
           <Nav />
           <Switch>
-            <Route path="/groceries" component={Groceries}>
-              <Vegies />
-            </Route>
-            <Route path="/markets" exact component={Markets}>
-              <Stalls />
-            </Route>
-            <Route path="/farms" exact component={Farms}>
-              <Farm />
-            </Route>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route>
-              <Signup />
-            </Route>
-            <Route path='farms' component={NewFarm}>
-              <NewFarmPage />
-            </Route>
+            <Route path="/" exact component={About}></Route>
+            <Route path="/groceries" component={Groceries}></Route>
+            <Route path="/markets" component={Markets}></Route>
+            <Route path="/farms" component={Farms}></Route>
+            <Route path='farms/new' component={NewFarm}></Route>
+            <Route path="/signup" component={Signup}></Route>
           </Switch>
         </div>
         </Router>
@@ -49,23 +37,5 @@ export default function App() {
   )
 }
 
-function Home() {
-  return <About />
-}
 
-function Vegies() {
-  return <Groceries />
-}
-
-function Stalls() {
-  return <Markets />
-}
-
-function Farm() {
-  return <Farms />
-}
-
-function NewFarmPage() {
-  return <NewFarm />
-}
 

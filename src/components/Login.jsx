@@ -41,19 +41,35 @@ export default class Login extends Component {
                     loggedIn: true,
                     redirect: true,
                 })
+                sessionStorage.setItem('loggedIn', 'true')
             } else {
                 console.log('user login failed')
             }
         })
     }
-    
+        logout = () => {
+            console.log('logout!')
+            console.log(sessionStorage)
+            sessionStorage.removeItem('loggedIn')
+            sessionStorage.removeItem('userAuthToken')
+            sessionStorage.removeItem('displayName')
+            this.setState({
+                loggedIn: false
+            })
+            console.log(sessionStorage)
+        }
     render() {
         // if (this.state.redirect === true) {
         //     return <Redirect to="/userFarm" />
         // }
         return (
             <div>
-                { this.state.loggedIn ? <h2>Welcome, {sessionStorage.displayName}</h2> :
+                { this.state.loggedIn ? 
+                <div>
+                    <h2>Welcome, {sessionStorage.displayName}</h2>
+                    <button onClick={this.logout}>Logout</button> 
+                </div>
+                :
                 <form className="Login" onSubmit={this.handleSubmit}>
                     <h4>Log in</h4>
                     <label htmlFor='email'>Email: </label>

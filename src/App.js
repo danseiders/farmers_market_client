@@ -26,6 +26,7 @@ export default function App() {
             <Route path="/farms" component={Farms}></Route>
             <Route path="/newfarm" component={NewFarm}></Route>
             <Route path="/signup" component={Signup}></Route>
+
           </Switch>
         </div>
         </Router>

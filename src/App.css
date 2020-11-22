@@ -1,8 +1,20 @@
-body{
+body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
 }
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+}
+/* HEADER */
 .Header {
   display: flex;
   justify-content: space-between;
@@ -12,15 +24,17 @@ body{
   padding-left: 5%;
   padding-right: 5%;
 }
-.Footer {
-  background-color: darkgrey;
-  padding: 10px;
+.Title img {
+  width: 500px;
 }
+/* LOGIN AREA */
 .Login {
   background-color: darkkhaki;
   text-align: right;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 10px;
+
 }
 .Login input {
   margin-bottom: 5px;
@@ -32,13 +46,199 @@ body{
 }
 .Login button {
   border: none;
-  padding: 5px;
+  padding: 10px;
   color: white;
   background-color: green;
 }
 .User-box p {
   font-size: .7em;
   padding-bottom: 10px;
+}
+.logoutBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: red;
+  width: 100px;
+  cursor: pointer;
+}
+.newFarmBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: green;
+  width: 100px;
+  cursor: pointer;
+}
+.editFarmBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: goldenrod;
+  width: 100px;
+  cursor: pointer;
+}
+/* SIGNUP AREA */
+.Signup {
+  background-color: tomato;
+  width: 40%;
+  border-radius: 20px;
+  text-align: center;
+  margin: 10% auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Signup-form {
+  padding: 15px;
+  text-align: right;
+  width: 50%;
+}
+.Signup-form input {
+  width: 150px;
+}
+.Signup-form button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+}
+/* LOGGED IN VIEW */
+.LoggedIn-box {
+  background-color: powderblue;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+.LoggedIn-box button {
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 10px;
+}
+/* NAV BAR */
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+}
+.Nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+.Nav-links a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* MARKET PAGE */
+.Markets {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+} 
+.Markets-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 150px;
+  background-color: peru;
+  color: white;
+}
+.Market-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 40%;
+  margin: 10px auto;
+  text-align: center;
+  background-color: thistle;
+  border-radius: 20px;
+}
+.Market-item img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+}
+
+/* FARM ITEMS */
+
+/* FOOTER */
+.Footer {
+  background-color: darkgrey;
+  padding: 10px;
+  flex: none;
+}
+.About-footer {
+  margin-top: 50%;
+}
+/* REACT ROUTER */
+.React-router {
+  flex: 10;
+}
+/* PAGES */
+.About {
+  background-image: url('https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  /* clip-path: inset(55% 0 25% 0); */
+  height: 60vh;
+  background-size: cover;
+}
+.Farms {
+  height: 60vh;
+}
+.Groceries {
+  height: 60vh;
+}
+.Markets {
+  height: 60vh;
+}
+/* Index.css page items merged into App.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.infoDump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(188,188,188,0.85);
+  text-align: center;
+  padding: 20px;
+}
+/* Responsive Media Queries */
+@media (max-width: 840px) {
+  .Title img {
+    width: 350px;
+  }
+}
+@media (max-width: 670px) {
+  .Title img {
+    width: 220px;
+  }
+  .Login {
+    padding: 0px;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .Login input {
+    margin-bottom: 1px;
+    padding: 0px;
+    width: 80px;
+  }
+  .Header {
+    height: 18vh;
+  }
 }
 
 

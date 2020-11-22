@@ -2,21 +2,37 @@ import React, { Component } from 'react'
 import './App.css'
 import About from './components/About'
 import Footer from './components/Footer'
-import Groceries from './components/Groceries'
+import Groceries from './Pages/Groceries'
+import Farms from './Pages/Farms'
 import Header from './components/Header'
+import {BrowserRouter as Router, Switch, Route, Link, withRouter, Redirect} from 'react-router-dom';
+import Markets from './Pages/Markets'
+import Nav from './components/Nav'
+import Signup from './Pages/Signup'
+import NewFarm from './Pages/NewFarm'
 
 
-export default class App extends Component {
-  render() {
-    return (
-      <div className="site-body">
-        <Header />
-        <About />
-        <p>index of farms here</p>
-        <Groceries />
-        <Footer />
-      </div>
-    )
-  }
+export default function App() {
+  return (
+    <div className='App'>
+        <Router>
+        <div className='React-router'>
+          <Header />
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={About}></Route>
+            <Route path="/groceries" component={Groceries}></Route>
+            <Route path="/markets" component={Markets}></Route>
+            <Route path="/farms" component={Farms}></Route>
+            <Route path="/newfarm" component={NewFarm}></Route>
+            <Route path="/signup" component={Signup}></Route>
+          </Switch>
+        </div>
+        </Router>
+        {/* <div className='Footer'>
+          <Footer />
+        </div> */}
+      
+    </div>
+  )
 }
-

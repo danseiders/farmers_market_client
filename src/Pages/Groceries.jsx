@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Footer from '../components/Footer'
+
 
 export default class Groceries extends Component {
     constructor(props) {
@@ -10,7 +12,7 @@ export default class Groceries extends Component {
     }
 
     componentDidMount() {
-        axios.get(`https://farm-stan-api.herokuapp.com/`)
+        axios.get(`https://farm-stan-api.herokuapp.com/groceries`)
         .then(res => {
             console.log(res)
             this.setState({ vegetables: res.data })
@@ -19,14 +21,16 @@ export default class Groceries extends Component {
 
     render() {
         return (
-            <div>
+            <div className='Groceries'>
                 <h1>VEGETABLES:</h1>
-                {this.state.vegetables}
-                {/* <ul>
-                {this.state.vegetables.map((vegie) => 
-                <li>{vegie.name}</li>
+                <ul className='Groceries-item'>
+                {this.state.vegetables.map((veggie) => 
+                <li key={veggie.id}>{veggie.name} | {veggie.variation}</li>
                 )}
-                </ul> */}
+                </ul>
+                <div className='Footer'>
+                    <Footer />
+                </div>
             </div>
         )
     }

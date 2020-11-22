@@ -65,7 +65,7 @@ export default class Login extends Component {
         return (
             <div>
                 { this.state.loggedIn ? 
-                <div>
+                <div className='LoggedIn-box'>
                     <h2>Welcome, {sessionStorage.displayName}</h2>
                     <button className='newFarmBtn'>New Farm</button>
                     <button className='editFarmBtn'>Edit Farm</button>

@@ -31,8 +31,10 @@ ul {
 .Login {
   background-color: darkkhaki;
   text-align: right;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 10px;
+
 }
 .Login input {
   margin-bottom: 5px;
@@ -44,13 +46,37 @@ ul {
 }
 .Login button {
   border: none;
-  padding: 5px;
+  padding: 10px;
   color: white;
   background-color: green;
 }
 .User-box p {
   font-size: .7em;
   padding-bottom: 10px;
+}
+.logoutBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: red;
+  width: 100px;
+  cursor: pointer;
+}
+.newFarmBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: green;
+  width: 100px;
+  cursor: pointer;
+}
+.editFarmBtn {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: goldenrod;
+  width: 100px;
+  cursor: pointer;
 }
 /* SIGNUP AREA */
 .Signup {
@@ -79,6 +105,19 @@ ul {
   color: white;
   margin-top: 5px;
   border: none;
+  cursor: pointer;
+}
+/* LOGGED IN VIEW */
+.LoggedIn-box {
+  background-color: powderblue;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+.LoggedIn-box button {
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 10px;
 }
 /* NAV BAR */
 .Nav {
@@ -96,6 +135,7 @@ ul {
 }
 .Nav-links a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* MARKET PAGE */

@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-
 export default class Login extends Component {
     render() {
         return (
             <div>
+
                 { this.props.loggedIn ? 
-                <div>
+                <div className='LoggedIn-box'>
                     <h2>Welcome, {sessionStorage.displayName}</h2>
-                    <button onClick={this.props.logout}>Logout</button> 
+                    <button className='newFarmBtn'>New Farm</button>
+                    <button className='editFarmBtn'>Edit Farm</button>
+                    <button className='logoutBtn' onClick={this.props.logout}>Logout</button> 
                 </div>
                 :
                 <form className="Login" onSubmit={this.props.handleSubmit}>
@@ -26,7 +28,7 @@ export default class Login extends Component {
                             id='password'
                             onChange={this.props.handleChange}/>
                             <br/>
-                    <input type="submit" value="Log In"/>
+                    <button className='loginBtn' id='submit' value='submit'>Submit</button>
                 </form> 
                 }
             </div>

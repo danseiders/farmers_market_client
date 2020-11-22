@@ -36,7 +36,7 @@ export default class Login extends Component {
             console.log(err)
         })
         .then(() => {
-            if(sessionStorage.userAuthToken.length > 0 ){
+            if(sessionStorage.userAuthToken && sessionStorage.userAuthToken.length > 0 ){
                 this.setState({
                     loggedIn: true,
                     redirect: true,

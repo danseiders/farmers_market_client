@@ -5,10 +5,12 @@ export default class EditFarm extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: '',
+            email: '',
+            password: '',
+            displayName: '',
             address: '',
             phoneNumber: '',
-            email: '',
+            items: '',
             market: '',
             redirect: null
         }
@@ -46,6 +48,7 @@ export default class EditFarm extends Component {
                         type='text'
                         name='displayName'
                         id='displayName'
+                        value={sessionStorage.displayName}
                         onChange={this.handleChange}/><br/>
                     <label htmlFor='address'>Address:</label>
                     <input

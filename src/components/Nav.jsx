@@ -15,9 +15,6 @@ export default class Nav extends Component {
                     <Link to='/farms'>
                         <li>Farms</li>
                     </Link>
-                    <Link to="/groceries">
-                        <li>Vegetables</li>
-                    </Link>
                 </ul>
             </div>
         )

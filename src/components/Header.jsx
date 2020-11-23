@@ -25,7 +25,7 @@ export default class Header extends Component {
             const decoded = jwt_decode(token) //decodes token to access payload
             sessionStorage.setItem('userAuthToken', token) //updates sessionStorage with token
             sessionStorage.setItem('displayName', decoded.user.displayName) //updates sessionStorage with displayName
-            
+            sessionStorage.setItem('userId', decoded.user.id)
         })
         .catch(err => {
             console.log(err)

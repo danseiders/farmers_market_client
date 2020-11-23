@@ -45,7 +45,9 @@ export default class EditFarm extends Component {
     }
 
     handleSubmit(event){
+        const token = sessionStorage.userAuthToken
         event.preventDefault()
+<<<<<<< HEAD
         axios.put('https://farm-stan-api.herokuapp.com/users/update', {
             email: '',
             password: '',
@@ -55,6 +57,19 @@ export default class EditFarm extends Component {
             items: '',
             market: '',
         }).then(res => {
+=======
+        axios.put(`https://farm-stan-api.herokuapp.com/users/update`, {
+            email: this.state.email,
+            password: this.state.password,
+            displayName: this.state.displayName,
+            address: this.state.address,
+            phoneNumber: this.state.phoneNumber,
+            items: this.state.items,
+            market: this.state.market
+        }, { headers: {
+                Authorization: 'bearer ' + token,
+            }}).then(res => {
+>>>>>>> 5687f029adcf480adbb00d69c96b7ccab061761c
             console.log(res)
         }).catch(err => {
             console.log(err)
@@ -66,14 +81,18 @@ export default class EditFarm extends Component {
     }
 
     handleDelete(event){
-        axios.delete(`https://farm-stan-api.herokuapp.com/users`)
-    }
-
+        console.log(event)
+        const token = sessionStorage.userAuthToken
+        axios.delete(`https://farm-stan-api.herokuapp.com/users/delete`, { 
+            headers: {
+                Authorization: 'bearer ' + token,
+            }}
+    )}
     render() {
         return (
             <div className='editFarm'>
                 <h1>Edit Farm</h1>
-                <form className='edit-form' onSubmit={this.handleSubmit} onDelete={this.handleDelete}>
+                <form className='edit-form' onSubmit={this.handleSubmit}>
                     <label htmlFor='email'>E-mail:</label>
                     <input
                         type='text'
@@ -117,8 +136,8 @@ export default class EditFarm extends Component {
                         defaultValue={this.state.market}
                         onChange={this.handleChange}/><br/>
                     <button id='submit' value='submit'>Submit</button>
-                    <button id='delete' value='delete'>Delete User</button>
                 </form>
+                    <button id='delete' value='delete' onClick={this.handleDelete}>Delete User</button>
             </div>
         )
     }

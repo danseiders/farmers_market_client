@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Groceries from './Groceries'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
+import '../App.css'
 
 
 export default class Farms extends Component {
@@ -29,12 +30,13 @@ export default class Farms extends Component {
                 {this.state.farms.map((farm) => 
                 <div className='Farms-item'>
                     <h3 key={farm._id}>{farm.displayName}</h3>
+
                     <p>Markets: {farm.market}</p>
                     <h5>Available This Week:</h5>
                     <p>{farm.items}</p>
                 </div>    
                 )}
-                <Link to="/newfarm">Add a New Farm</Link>
+                <Link to="/farms/:id">Edit Your Farm</Link>
                 <div className='Footer'>
                     <Footer />
                 </div>

@@ -6,10 +6,10 @@ export default class Signup extends Component {
     constructor(props){
         super(props)
         this.state = {
-           displayName: '',
-           email: '',
-           password: '',
-           redirect: false
+            displayName: '',
+            email: '',
+            password: '',
+            redirect: false
         //    loggedIn: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)

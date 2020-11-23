@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 export default class Login extends Component {
     render() {
         return (
@@ -8,7 +9,9 @@ export default class Login extends Component {
                 <div className='LoggedIn-box'>
                     <h2>Welcome, {sessionStorage.displayName}</h2>
                     <button className='newFarmBtn'>New Farm</button>
-                    <button className='editFarmBtn'>Edit Farm</button>
+                    <Link to='/farms/:id'>
+                        <button className='editFarmBtn'>Edit Farm</button>
+                    </Link>
                     <button className='logoutBtn' onClick={this.props.logout}>Logout</button> 
                 </div>
                 :

@@ -201,6 +201,30 @@ button:hover {
 .Farms-item h5 {
   color: black;
 }
+/* EDIT FARM */
+.editFarm {
+  background-color: lightpink;
+  width: 40%;
+  border-radius: 20px;
+  text-align: center;
+  margin: 10% auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.editFarm input {
+  width: 150px;
+}
+.editFarm button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+}
 /* FOOTER */
 .Footer {
   background-color: darkgrey;

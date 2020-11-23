@@ -63,7 +63,7 @@ export default class Header extends Component {
                         handleSubmit={this.handleSubmit}
                         logout={this.logout}
                     />
-                   {this.state.loggedIn ? '' : <p >New? <Link to='/signup'>Create An Account</Link></p>
+                    {this.state.loggedIn ? '' : <p >New? <Link to='/signup'>Create An Account</Link></p>
     }
                 </div>
             </div>

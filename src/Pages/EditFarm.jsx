@@ -46,7 +46,7 @@ export default class EditFarm extends Component {
 
     handleSubmit(event){
         event.preventDefault()
-        axios.post(`https://farm-stan-api.herokuapp.com/users`, {
+        axios.put('https://farm-stan-api.herokuapp.com/users/update', {
             email: '',
             password: '',
             displayName: '',

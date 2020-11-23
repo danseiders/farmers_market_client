@@ -14,14 +14,17 @@ export default class EditFarm extends Component {
         }
     }
 
-    // componentDidMount() {
-    //     axios.get(``)
-    // }
+    componentDidMount() {
+        axios.get(`https://farm-stan-api.herokuapp.com/farms`)
+        .then(res => {
+            console.log(res)
+        })
+    }
 
     render() {
         return (
             <div>
-                <h1>Edit Dis Farm</h1>
+                <h1>Edit Farm</h1>
             </div>
         )
     }

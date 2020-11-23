@@ -18,7 +18,7 @@ export default class Farms extends Component {
         axios.get(`https://farm-stan-api.herokuapp.com/farms`)
         .then(res => {
             console.log(res)
-            this.setState({ farms: res.data })
+            this.setState({ farms: res.data.farm })
         })
     }
 

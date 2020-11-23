@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Groceries from './Groceries'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
+import '../App.css'
 
 
 export default class Farms extends Component {
@@ -18,7 +19,7 @@ export default class Farms extends Component {
         axios.get(`https://farm-stan-api.herokuapp.com/farms`)
         .then(res => {
             console.log(res)
-            this.setState({ farms: res.data })
+            this.setState({ farms: res.data.farm })
         })
     }
 
@@ -28,7 +29,7 @@ export default class Farms extends Component {
                 <h1>FARMS:</h1>
                 {this.state.farms.map((farm) => 
                 <div className='Farms-item'>
-                    <h3 key={farm._id}>{farm.name}</h3>
+                    <h3 key={farm._id}>{farm.displayName}</h3>
                     <p>Markets{farm.market}</p>
                     <h5>Available This Week:</h5>
                     <ul>
@@ -39,7 +40,7 @@ export default class Farms extends Component {
                     </ul>
                 </div>    
                 )}
-                <Link to="/newfarm">Add a New Farm</Link>
+                <Link to="/farms/:id">Edit Your Farm</Link>
                 <div className='Footer'>
                     <Footer />
                 </div>

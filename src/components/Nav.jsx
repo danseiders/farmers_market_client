@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default class Nav extends Component {
     render() {
         return (
             <div className="Nav">
                 <ul className='Nav-links'>
-                    <Link to='/'>
+                    <NavLink exact activeClassName='active' to='/'>
                         <li>Home</li>
-                    </Link>
-                    <Link to='/markets'>
+                    </NavLink>
+                    <NavLink exact activeClassName='active' to='/markets'>
                         <li>Markets</li>
-                    </Link>
-                    <Link to='/farms'>
+                    </NavLink>
+                    <NavLink exact activeClassName='active' to='/farms'>
                         <li>Farms</li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </div>
         )

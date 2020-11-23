@@ -7,7 +7,7 @@ export default class Login extends Component {
                 { this.props.loggedIn ? 
                 <div className='LoggedIn-box'>
                     <h2>Welcome, {sessionStorage.displayName}</h2>
-                    
+                    <button className='newFarmBtn'>New Farm</button>
                     <Link to='/farms/edit'>
                         <button className='editFarmBtn'>Edit Farm</button>
                     </Link>

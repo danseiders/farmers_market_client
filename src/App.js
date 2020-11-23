@@ -24,7 +24,7 @@ export default function App() {
             <Route path="/groceries" component={Groceries}></Route>
             <Route path="/markets" component={Markets}></Route>
             <Route path="/farms" exact component={Farms}></Route>
-            <Route path="/farms/:id" exact component={EditFarm}></Route>
+            <Route path="/farms/edit" exact component={EditFarm}></Route>
             <Route path="/newfarm" component={NewFarm}></Route>
             <Route path="/signup" component={Signup}></Route>
           </Switch>

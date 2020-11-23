@@ -4,7 +4,6 @@ export default class Login extends Component {
     render() {
         return (
             <div>
-
                 { this.props.loggedIn ? 
                 <div className='LoggedIn-box'>
                     <h2>Welcome, {sessionStorage.displayName}</h2>

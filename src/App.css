@@ -130,6 +130,8 @@ button:hover {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
+  width: 85%;
+  margin: 0 auto;
 }
 .Nav-links {
   list-style: none;
@@ -194,7 +196,10 @@ button:hover {
   border-radius: 20px;
 }
 .Farms-item h3 {
-  
+  color: black;
+}
+.Farms-item h5 {
+  color: black;
 }
 /* FOOTER */
 .Footer {

@@ -31,7 +31,8 @@ export default class Farms extends Component {
                 <div className='Farms-item'>
                     <h3 key={farm._id}>{farm.displayName}</h3>
 
-                    <p>Markets: {farm.market}</p>
+                    <h5>Markets:</h5>
+                    <p>{farm.market}</p>
                     <h5>Available This Week:</h5>
                     <p>{farm.items}</p>
                 </div>    

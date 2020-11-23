@@ -47,17 +47,6 @@ export default class EditFarm extends Component {
     handleSubmit(event){
         const token = sessionStorage.userAuthToken
         event.preventDefault()
-<<<<<<< HEAD
-        axios.put('https://farm-stan-api.herokuapp.com/users/update', {
-            email: '',
-            password: '',
-            displayName: '',
-            address: '',
-            phoneNumber: '',
-            items: '',
-            market: '',
-        }).then(res => {
-=======
         axios.put(`https://farm-stan-api.herokuapp.com/users/update`, {
             email: this.state.email,
             password: this.state.password,
@@ -69,7 +58,6 @@ export default class EditFarm extends Component {
         }, { headers: {
                 Authorization: 'bearer ' + token,
             }}).then(res => {
->>>>>>> 5687f029adcf480adbb00d69c96b7ccab061761c
             console.log(res)
         }).catch(err => {
             console.log(err)
@@ -100,35 +88,35 @@ export default class EditFarm extends Component {
                         id='email'
                         defaultValue={this.state.email}
                         onChange={this.handleChange}/><br/>
-                    <label htmlFor='displayName'>Username:</label>
+                    <label htmlFor='displayName'>Username: </label>
                     <input
                         type='text'
                         name='displayName'
                         id='displayName'
                         defaultValue={this.state.displayName}
                         onChange={this.handleChange}/><br/>
-                    <label htmlFor='address'>Address:</label>
+                    <label htmlFor='address'>Address: </label>
                     <input
                         type='text'
                         name='address'
                         id='address'
                         defaultValue={this.state.address}
                         onChange={this.handleChange}/><br/>
-                    <label htmlFor='phoneNumber'>Phone Number:</label>
+                    <label htmlFor='phoneNumber'>Phone Number: </label>
                     <input
                         type='text'
                         name='phoneNumber'
                         id='phoneNumber'
                         defaultValue={this.state.phoneNumber}
                         onChange={this.handleChange}/><br/>
-                    <label htmlFor='items'>Grocery Items:</label>
+                    <label htmlFor='items'>Grocery Items: </label>
                     <input
                         type='text'
                         name='items'
                         id='items'
                         defaultValue={this.state.items}
                         onChange={this.handleChange}/><br/>
-                    <label htmlFor='market'> Market:</label>
+                    <label htmlFor='market'> Market: </label>
                     <input
                         type='text'
                         name='market'

@@ -26,18 +26,22 @@ export default class Farms extends Component {
     render() {
         return (
             <div className='Farms'>
-                <h1>FARMS:</h1>
+                <h1>FARMS</h1>
+                <div className='Farms-List'>
                 {this.state.farms.map((farm) => 
-                <div className='Farms-item'>
-                    <h3 key={farm._id}>{farm.displayName}</h3>
+                    <div className='Farms-item'>
+                        <h3 key={farm._id}>{farm.displayName}</h3>
 
-                    <h5>Markets:</h5>
-                    <p>{farm.market}</p>
-                    <h5>Available This Week:</h5>
-                    <p>{farm.items}</p>
-                </div>    
-                )}
-                <Link to="/farms/edit">Edit Your Farm</Link>
+                        <h5>Markets</h5>
+                        <Link to='/markets'>
+                            <p>{farm.market}</p>
+                        </Link>
+                        <h5>Available This Week:</h5>
+                        <p>{farm.items}</p>
+                    </div>    
+                    )}
+                </div>
+                {/* <Link to="/farms/edit">Edit Your Farm</Link> */}
                 <div className='Footer'>
                     <Footer />
                 </div>

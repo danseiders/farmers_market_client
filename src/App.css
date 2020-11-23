@@ -1,3 +1,4 @@
+/* UNIVERSAL */
 body {
   display: flex;
   flex-direction: column;
@@ -16,12 +17,12 @@ ul {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 button { 
   cursor: pointer;
-}
-a:hover {
-  opacity: 0.7;
+  border-radius: 10px;
+  border: none;
 }
 button:hover {
   opacity: 0.7;
@@ -101,6 +102,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
 }
 .Signup-form {
   padding: 15px;
@@ -136,8 +138,9 @@ button:hover {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  width: 85%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 20px auto;
+  background-color: lavender;
 }
 .Nav-links {
   list-style: none;
@@ -154,8 +157,11 @@ button:hover {
   background-color: indigo;
   color: white;
   padding: 10px 25px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  /* box-shadow: 3px -3px 10px 0px rgba(50, 50, 50, 0.75); */
 }
 /* MARKET PAGE */
 .Markets {
@@ -177,10 +183,11 @@ button:hover {
   flex-direction: column;
   padding: 15px;
   width: 40%;
-  margin: 10px auto;
+  margin: 15px auto;
   text-align: center;
   background-color: thistle;
   border-radius: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
 }
 .Market-item img {
   max-width: 100px;
@@ -191,15 +198,23 @@ button:hover {
 /* FARM ITEMS */
 .Farms {
   text-align: center;
-
+}
+.Farms-List {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
 }
 .Farms-item {
   background-color: goldenrod;
   color: white;
   width: 30%;
+  min-height: 200px;
   margin: 10px auto;
   padding: 10px;
   border-radius: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
 }
 .Farms-item h3 {
   color: black;
@@ -244,6 +259,8 @@ button:hover {
   padding: 15px;
   text-align: right;
   width: 65%;
+  margin-right: 20%;
+  margin-bottom: 5%;
 }
 /* FOOTER */
 .Footer {

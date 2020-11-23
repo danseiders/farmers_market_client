@@ -36,7 +36,7 @@ export default class Farms extends Component {
                     <p>{farm.items}</p>
                 </div>    
                 )}
-                <Link to="/farms/:id">Edit Your Farm</Link>
+                <Link to="/farms/edit">Edit Your Farm</Link>
                 <div className='Footer'>
                     <Footer />
                 </div>

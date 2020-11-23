@@ -30,14 +30,10 @@ export default class Farms extends Component {
                 {this.state.farms.map((farm) => 
                 <div className='Farms-item'>
                     <h3 key={farm._id}>{farm.displayName}</h3>
-                    <p>Markets{farm.market}</p>
+
+                    <p>Markets: {farm.market}</p>
                     <h5>Available This Week:</h5>
-                    <ul>
-                        {farm.items.forEach(veggie => {
-                            <li>{veggie} | {veggie.variation}</li>
-                        })
-                    }
-                    </ul>
+                    <p>{farm.items}</p>
                 </div>    
                 )}
                 <Link to="/farms/:id">Edit Your Farm</Link>

@@ -11,7 +11,6 @@ import Nav from './components/Nav'
 import Signup from './Pages/Signup'
 import NewFarm from './Pages/NewFarm'
 import EditFarm from './Pages/EditFarm'
-import { tsConstructorType, tsConstructSignatureDeclaration } from '@babel/types'
 
 export default function App() {
   return (

@@ -36,6 +36,8 @@ We used Axios callbacks to fetch and post to the database on the backend, and th
 # Future Plans
 There is still plenty of room for this app to grow in the future.  One of the stretch goals we didn't get to was implementing the Google Maps api in order to bring up a map of the Market locations.  Everyone in our group has expressed interest in working more on this in the future, and we are all excited at the posibility of launching a full app to the public.
 
+# Deployed Site
+http://farm-stan-client.herokuapp.com/
 # Learning Sources
 These resources helped our team learn how to use our core extensions:
 ### Axios

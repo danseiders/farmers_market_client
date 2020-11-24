@@ -13,7 +13,8 @@ export default class EditFarm extends Component {
             phoneNumber: '',
             items: '',
             market: '',
-            redirect: null
+            redirect: null,
+            redirectDelete: null
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -48,17 +49,6 @@ export default class EditFarm extends Component {
     handleSubmit(event){
         const token = sessionStorage.userAuthToken
         event.preventDefault()
-<<<<<<< HEAD
-        axios.put('https://farm-stan-api.herokuapp.com/users/update', {
-            email: '',
-            password: '',
-            displayName: '',
-            address: '',
-            phoneNumber: '',
-            items: '',
-            market: '',
-        }).then(res => {
-=======
         axios.put(`https://farm-stan-api.herokuapp.com/users/update`, {
             email: this.state.email,
             password: this.state.password,
@@ -70,7 +60,6 @@ export default class EditFarm extends Component {
         }, { headers: {
                 Authorization: 'bearer ' + token,
             }}).then(res => {
->>>>>>> eae5a592038657b836292e87789a3c2a18e2b609
             console.log(res)
         }).catch(err => {
             console.log(err)
@@ -90,12 +79,14 @@ export default class EditFarm extends Component {
             }}
         ).then(() => {
             this.setState({
-                loggedIn: false
+                redirectDelete: true
         })
     })
 }
     render() {
         if (this.state.redirect === true) {
+            return <Redirect to="/farms" />
+        } else if (this.state.redirectDelete === true) {
             return <Redirect to="/" />
         }
         return (

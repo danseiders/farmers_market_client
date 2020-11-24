@@ -25,7 +25,7 @@ Our first major drawback was encountered with CORS upon initially testing our ap
 ## Step 3: Changing Pages
 ### React Router
 With our api callbacks working, we moved on to the next step: figuring out how to change what is displayed on the screen when the user accesses a new route.  Thanks to recommendation from our standup instructor John, we accomplished this task using React Router.
-The majority of our React Router code ended up in the base App.js.  From there, our structure was <Router> => <Switch> => <Route>.  Everything in the render for the App export was wrapped in the top-level <Router> tag.  We kept our Navigation and Header component calls in this base level.  One step deeper, we added the <Switch> tags.  Here, we can nest our <Route> tags, which themselves contain key Page files.  When the <Switch> finds a <Route> with a matching path to the HTTPS, the .jsx file inside the Route will be rendered.
+The majority of our React Router code ended up in the base App.js.  From there, our structure was Router => Switch => Route.  Everything in the render for the App export was wrapped in the top-level Router tag.  We kept our Navigation and Header component calls in this base level.  One step deeper, we added the Switch tags.  Here, we can nest our Route tags, which themselves contain key Page files.  When the Switch finds a Route with a matching path to the HTTPS, the .jsx file inside the Route will be rendered.
 
 ## Step 4: Wrapup
 

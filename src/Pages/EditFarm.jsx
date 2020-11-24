@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router'
 
 export default class EditFarm extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ export default class EditFarm extends Component {
             phoneNumber: '',
             items: '',
             market: '',
-            redirect: null
+            redirect: null,
+            redirectDelete: null
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -75,8 +77,22 @@ export default class EditFarm extends Component {
             headers: {
                 Authorization: 'bearer ' + token,
             }}
-    )}
+        ).then(() => {
+            this.setState({
+                redirectDelete: true
+        })
+        sessionStorage.removeItem('loggedIn')
+        sessionStorage.removeItem('userAuthToken')
+        sessionStorage.removeItem('displayName')
+        sessionStorage.removeItem('userId')
+    })
+}
     render() {
+        if (this.state.redirect === true) {
+            return <Redirect to="/farms" />
+        } else if (this.state.redirectDelete === true) {
+            return <Redirect to="/" />
+        }
         return (
             <div className='editFarm'>
                 <h1>Edit Farm</h1>

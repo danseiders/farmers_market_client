@@ -10,7 +10,8 @@ import Markets from './Pages/Markets'
 import Nav from './components/Nav'
 import Signup from './Pages/Signup'
 import NewFarm from './Pages/NewFarm'
-
+import EditFarm from './Pages/EditFarm'
+import { tsConstructorType, tsConstructSignatureDeclaration } from '@babel/types'
 
 export default function App() {
   return (
@@ -23,7 +24,8 @@ export default function App() {
             <Route path="/" exact component={About}></Route>
             <Route path="/groceries" component={Groceries}></Route>
             <Route path="/markets" component={Markets}></Route>
-            <Route path="/farms" component={Farms}></Route>
+            <Route path="/farms" exact component={Farms}></Route>
+            <Route path="/farms/edit" exact component={EditFarm}></Route>
             <Route path="/newfarm" component={NewFarm}></Route>
             <Route path="/signup" component={Signup}></Route>
           </Switch>

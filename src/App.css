@@ -1,3 +1,4 @@
+/* UNIVERSAL */
 body {
   display: flex;
   flex-direction: column;
@@ -14,6 +15,18 @@ body {
 ul {
   list-style: none;
 }
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+button { 
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+button:hover {
+  opacity: 0.7;
+}
 /* HEADER */
 .Header {
   display: flex;
@@ -21,8 +34,7 @@ ul {
   align-items: center;
   text-align: center;
   height: 20vh;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 3%;
 }
 .Title img {
   width: 500px;
@@ -34,7 +46,6 @@ ul {
   border-radius: 20px;
   padding: 15px;
   margin-top: 10px;
-
 }
 .Login input {
   margin-bottom: 5px;
@@ -90,6 +101,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
 }
 .Signup-form {
   padding: 15px;
@@ -125,6 +137,9 @@ ul {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
+  width: 100%;
+  margin: 20px auto;
+  background-color: lavender;
 }
 .Nav-links {
   list-style: none;
@@ -137,7 +152,16 @@ ul {
   text-decoration: none;
   cursor: pointer;
 }
-
+.active {
+  background-color: indigo;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  /* box-shadow: 3px -3px 10px 0px rgba(50, 50, 50, 0.75); */
+}
 /* MARKET PAGE */
 .Markets {
   display: flex;
@@ -158,10 +182,11 @@ ul {
   flex-direction: column;
   padding: 15px;
   width: 40%;
-  margin: 10px auto;
+  margin: 15px auto;
   text-align: center;
   background-color: thistle;
   border-radius: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
 }
 .Market-item img {
   max-width: 100px;
@@ -170,12 +195,79 @@ ul {
 }
 
 /* FARM ITEMS */
-
+.Farms {
+  text-align: center;
+}
+.Farms-List {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.Farms-item {
+  background-color: goldenrod;
+  color: white;
+  width: 30%;
+  min-height: 200px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+}
+.Farms-item h3 {
+  color: black;
+}
+.Farms-item h5 {
+  color: black;
+}
+/* EDIT FARM */
+.editFarm {
+  background-color: lightpink;
+  width: 40%;
+  border-radius: 20px;
+  text-align: center;
+  margin: 10% auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.editFarm input {
+  width: 150px;
+}
+.editFarm button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+}
+.editFarm #delete {
+  padding: 10px;
+  background-color: rgb(248, 3, 3);
+  color: white;
+  margin-top: 5px;
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+}
+.edit-form {
+  padding: 15px;
+  text-align: right;
+  width: 65%;
+  margin-right: 20%;
+  margin-bottom: 5%;
+}
 /* FOOTER */
 .Footer {
   background-color: darkgrey;
   padding: 10px;
   flex: none;
+  text-align: center;
+  margin-top: 15px;
 }
 .About-footer {
   margin-top: 50%;
@@ -234,7 +326,10 @@ code {
   .Login input {
     margin-bottom: 1px;
     padding: 0px;
-    width: 80px;
+    width: 60px;
+  }
+  .Login label {
+    font-size: .5em;
   }
   .Header {
     height: 18vh;

@@ -4,7 +4,7 @@ export default class Footer extends Component {
     render() {
         return (
             <div className='Footer'>
-                <p>Coded by: Spencer Haugh, Aaron Luing, Charles Desiderio and Dan Seiders </p>
+                <p>Coded by: Charles Desiderio, Spencer Haugh, Aaron Luing, and Dan Seiders </p>
             </div>
         )
     }

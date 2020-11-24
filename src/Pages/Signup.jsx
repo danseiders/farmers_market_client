@@ -6,10 +6,14 @@ export default class Signup extends Component {
     constructor(props){
         super(props)
         this.state = {
-           displayName: '',
-           email: '',
-           password: '',
-           redirect: false
+            email: '',
+            password: '',
+            displayName: '',
+            address: '',
+            phoneNumber: '',
+            items: '',
+            market: '',
+            redirect: false,
         //    loggedIn: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -21,9 +25,13 @@ export default class Signup extends Component {
     handleSubmit(event){
         event.preventDefault()
         axios.post('https://farm-stan-api.herokuapp.com/users/new', {
-            displayName: this.state.displayName,
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            displayName: this.state.displayName,
+            address: this.state.address,
+            phoneNumber: this.state.phoneNumber,
+            items: this.state.items,
+            market: this.state.market
 
         })
         .then(res =>  {
@@ -47,12 +55,6 @@ export default class Signup extends Component {
             <div className='Signup'>
                 <h3>Create an account</h3>
             <form className='Signup-form' onSubmit={this.handleSubmit}>
-                <label htmlFor='displayName'>Username: </label>
-                <input 
-                    type='text' 
-                    name='displayName' 
-                    id='displayName'    
-                    onChange={this.handleChange}/><br />
                 <label htmlFor='email'>Email: </label>
                 <input 
                     type='text' 
@@ -64,11 +66,39 @@ export default class Signup extends Component {
                     type='password' 
                     name='password'
                     id='password' 
+                    onChange={this.handleChange}/><br /><br />
+                <label htmlFor='displayName'>Farm name: </label>
+                <input 
+                    type='text' 
+                    name='displayName' 
+                    id='displayName'    
                     onChange={this.handleChange}/><br />
-                {/* <input type="submit" value="Submit"/> */}
+                <label htmlFor='address'>Address: </label>
+                <input 
+                    type='text' 
+                    name='address' 
+                    id='address'    
+                    onChange={this.handleChange}/><br />
+                <label htmlFor='phoneNumber'>Phone: </label>
+                <input 
+                    type='text' 
+                    name='phoneNumber' 
+                    id='phoneNumber'    
+                    onChange={this.handleChange}/><br />
+                <label htmlFor='items'>Items: </label>
+                <input 
+                    type='text' 
+                    name='items' 
+                    id='items'    
+                    onChange={this.handleChange}/><br />
+                <label htmlFor='market'>Market: </label>
+                <input 
+                    type='text' 
+                    name='market' 
+                    id='market'    
+                    onChange={this.handleChange}/><br />
                 <button id='submit' value='submit'>Submit</button>
             </form>
-            
         </div>
         )
     }

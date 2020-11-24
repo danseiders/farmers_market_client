@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router'
 
 export default class EditFarm extends Component {
     constructor(props) {
@@ -75,8 +76,16 @@ export default class EditFarm extends Component {
             headers: {
                 Authorization: 'bearer ' + token,
             }}
-    )}
+        ).then(() => {
+            this.setState({
+                loggedIn: false
+        })
+    })
+}
     render() {
+        if (this.state.redirect === true) {
+            return <Redirect to="/" />
+        }
         return (
             <div className='editFarm'>
                 <h1>Edit Farm</h1>

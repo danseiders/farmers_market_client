@@ -266,6 +266,8 @@ button:hover {
   background-color: darkgrey;
   padding: 10px;
   flex: none;
+  text-align: center;
+  margin-top: 15px;
 }
 .About-footer {
   margin-top: 50%;

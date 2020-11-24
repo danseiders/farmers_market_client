@@ -1,3 +1,4 @@
 # farmers_market_client
-Aaron added this
-Spencer was here
+# Farm Stan: Frontend
+### Coded by Charles Desiderio, Spencer Haugh, Aaron Luing, and Dan Seiders
+

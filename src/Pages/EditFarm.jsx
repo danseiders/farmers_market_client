@@ -81,6 +81,10 @@ export default class EditFarm extends Component {
             this.setState({
                 redirectDelete: true
         })
+        sessionStorage.removeItem('loggedIn')
+        sessionStorage.removeItem('userAuthToken')
+        sessionStorage.removeItem('displayName')
+        sessionStorage.removeItem('userId')
     })
 }
     render() {

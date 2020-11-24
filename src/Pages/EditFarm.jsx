@@ -47,7 +47,6 @@ export default class EditFarm extends Component {
     handleSubmit(event){
         const token = sessionStorage.userAuthToken
         event.preventDefault()
-<<<<<<< HEAD
         axios.put('https://farm-stan-api.herokuapp.com/users/update', {
             email: '',
             password: '',
@@ -57,19 +56,6 @@ export default class EditFarm extends Component {
             items: '',
             market: '',
         }).then(res => {
-=======
-        axios.put(`https://farm-stan-api.herokuapp.com/users/update`, {
-            email: this.state.email,
-            password: this.state.password,
-            displayName: this.state.displayName,
-            address: this.state.address,
-            phoneNumber: this.state.phoneNumber,
-            items: this.state.items,
-            market: this.state.market
-        }, { headers: {
-                Authorization: 'bearer ' + token,
-            }}).then(res => {
->>>>>>> 5687f029adcf480adbb00d69c96b7ccab061761c
             console.log(res)
         }).catch(err => {
             console.log(err)

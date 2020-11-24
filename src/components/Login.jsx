@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 export default class Login extends Component {
     render() {
         return (
             <div>
-
                 { this.props.loggedIn ? 
                 <div className='LoggedIn-box'>
-                    <h2>Welcome, {sessionStorage.displayName}</h2>
-                    <button className='newFarmBtn'>New Farm</button>
-                    <button className='editFarmBtn'>Edit Farm</button>
+                    <h2>Welcome, {sessionStorage.displayName}!</h2>
+                    <Link to='/farms/edit'>
+                        <button className='editFarmBtn'>Edit Farm</button>
+                    </Link>
                     <button className='logoutBtn' onClick={this.props.logout}>Logout</button> 
                 </div>
                 :

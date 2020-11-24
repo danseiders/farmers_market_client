@@ -24,7 +24,6 @@ export default class NewFarm extends Component {
             name: this.state.name,
             address: this.state.address,
             phoneNumber: this.state.phoneNumber,
-            email: this.state.email,
             market: this.state.market
         })
         .then(res =>  {

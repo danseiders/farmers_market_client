@@ -34,8 +34,7 @@ button:hover {
   align-items: center;
   text-align: center;
   height: 20vh;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 3%;
 }
 .Title img {
   width: 500px;
@@ -325,7 +324,10 @@ code {
   .Login input {
     margin-bottom: 1px;
     padding: 0px;
-    width: 80px;
+    width: 60px;
+  }
+  .Login label {
+    font-size: .5em;
   }
   .Header {
     height: 18vh;

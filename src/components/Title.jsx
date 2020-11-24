@@ -6,7 +6,7 @@ export default class Title extends Component {
         return (
             <div className='Title' id='title-img'>
                 <Link to='/'>
-                    <img src="../images/farm-stan-logo.png"/>
+                    <img src="../images/farm-stan-logo.png" alt='Farm Stan Logo'/>
                 </Link>
             </div>
         )
